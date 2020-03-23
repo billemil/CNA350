@@ -1,18 +1,16 @@
 # CNA350
-##Necessary Components:
-###VM with the following installed:
+## Necessary Components:
+### VM with the following installed:
 	docker
 	docker-compose
-###Images:
+### Images:
 	phpmyadmin
 	mariadb
 
-##Prepare VM to run code:
+## Prepare VM to run code:
 	
 Clear existing images/containers
-'''
 >docker system prune -a
-'''
 
 Clone repository:
 >git clone https://github.com/billemil/CNA350
@@ -23,6 +21,8 @@ Navigate to maxscale directory:
 Edit images within docker-compose.yml to use latest versions:
 >sudo nano docker-compose.yml
 	ie. mariadb:10.3 --set to--> mariadb:latest 
+	
+## Run Project:
 
 Run the docker-compose.yml :
 >sudo docker-compose -f "docker-compose.yml" up -d --build
@@ -45,4 +45,4 @@ TEST Zipcode1:
 TEST Zipcode2:
 >mysql -u maxuser -pmaxpwd -h 127.0.0.1 -P 3306 -e "SELECT *  FROM zipcodes_two.zipcodes_two LIMIT 50;"
 
-#help received from sam and brandon during this project
+*help received from sam and brandon during this project*
