@@ -1,16 +1,18 @@
 # CNA350
-Necessary Components:
-VM with the following installed:
+##Necessary Components:
+###VM with the following installed:
 	docker
 	docker-compose
-Images:
+###Images:
 	phpmyadmin
 	mariadb
 
-Prepare VM to run code:
+##Prepare VM to run code:
 	
 Clear existing images/containers
+'''
 >docker system prune -a
+'''
 
 Clone repository:
 >git clone https://github.com/billemil/CNA350
